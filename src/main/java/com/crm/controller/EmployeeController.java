@@ -28,6 +28,7 @@ public class EmployeeController {
     @PostMapping("/add")
     public ResponseEntity<?> addEmployee(
             @Valid @RequestBody EmployeeDto dto , BindingResult result){
+        System.out.println(1000);
 
         if (result.hasErrors()){
             return new ResponseEntity<>
