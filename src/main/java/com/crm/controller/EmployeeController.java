@@ -29,6 +29,8 @@ public class EmployeeController {
     public ResponseEntity<?> addEmployee(
             @Valid @RequestBody EmployeeDto dto , BindingResult result){
 
+        System.out.println(1000);
+
         if (result.hasErrors()){
             return new ResponseEntity<>
                     (result.getFieldError().getDefaultMessage() , HttpStatus.INTERNAL_SERVER_ERROR);
